@@ -18,7 +18,6 @@ public class GameMaster {
 			System.out.println("Type a natural number bigger than 1 to create a map of that size: ");
 			Scanner scanner = new Scanner(System.in);
 			mapSize = scanner.nextInt();
-			scanner.close();
 		}
 		
 		Map map = new Map(mapSize);
@@ -37,7 +36,6 @@ public class GameMaster {
 			Scanner input = new Scanner(System.in);
 			String eingabe = input.nextLine();
 			int len = eingabe.length();
-			input.close();
 			
 			if (eingabe.equals("walk N")) {
 				if (map.checkCoordinates(player.getX() - 1, player.getY()) == false) {
